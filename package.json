@@ -1,0 +1,23 @@
+{
+  "name": "The-Greats",
+  "version": "1.0.0",
+  "description": "Getting Started with Processing JS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/trovell-oos/The-Greats.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/trovell-oos/The-Greats/issues"
+  },
+  "homepage": "https://github.com/trovell-oos/The-Greats#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
