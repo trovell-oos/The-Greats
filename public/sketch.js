@@ -1,11 +1,14 @@
 let img=[];
 let counter=0;
-let imgArray=['space-stars-galaxy-graphics.jpg','dishonored-2-2016-2-pic.jpg','Dishonored2-N-For-Nerds.jpg','maxresdefault.jpg'] 
+let imgArray=['background1.png','background2.png','background3.png','background4.png',
+'background5.png','background6.png','background7.png','background8.png']
+
 let song;
 let playing=false;
 let drift;
 let wall;
 let direction=90;
+
 function preload() { 
 	song=loadSound('gamemusic.mp3');
 	for (x in imgArray){
@@ -21,10 +24,26 @@ function setup() {
   wall.addAnimation('stil', 'box0001.png','box0002.png','box0003.png');
 }
 
+function checkBounds(sprite){
+	if(sprite.position.x > width){
+		sprite.position.x = 0;
+	}
+	if(sprite.position.x < 0){
+		sprite.position.x = width;
+	}
+	if(sprite.position.y > height){
+		sprite.position.x = 0;
+	}
+	if(sprite.position.y < 0){
+		sprite.position.x = height;
+	}
+}
+
 function draw() {
 	image(img[counter%img.length],0,0);
 	drift.setSpeed(3,direction);
 	wall.displace(drift);
+	checkBounds(drift);
 	drawSprites();
 }
   
